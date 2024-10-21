@@ -2,7 +2,7 @@
 //  SPNewsArticleReaderApp.swift
 //  SPNewsArticleReader
 //
-//  Created by mac on 21/10/24.
+//  Created by Suhas on 21/10/24.
 //
 
 import SwiftUI
