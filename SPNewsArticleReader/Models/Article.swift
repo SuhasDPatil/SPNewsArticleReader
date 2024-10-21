@@ -58,6 +58,8 @@ extension Article {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .iso8601
         
+        let apiResponse = try! jsonDecoder.decode(NewsAPIResponse.self, from: data)
+        return apiResponse.articles ?? []
     }
 }
 struct Source {
