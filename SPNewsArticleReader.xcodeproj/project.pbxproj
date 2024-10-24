@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		048511D82CC6531E001430DB /* NewsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048511D72CC6531E001430DB /* NewsAPIResponse.swift */; };
+		048511DB2CC65522001430DB /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048511DA2CC65522001430DB /* ArticleRowView.swift */; };
 		04BEA5142CC613770011EFFD /* SPNewsArticleReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEA5132CC613770011EFFD /* SPNewsArticleReaderApp.swift */; };
 		04BEA5162CC613770011EFFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEA5152CC613770011EFFD /* ContentView.swift */; };
 		04BEA5182CC6137B0011EFFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BEA5172CC6137B0011EFFD /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		048511D72CC6531E001430DB /* NewsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIResponse.swift; sourceTree = "<group>"; };
+		048511DA2CC65522001430DB /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
 		04BEA5102CC613770011EFFD /* SPNewsArticleReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPNewsArticleReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BEA5132CC613770011EFFD /* SPNewsArticleReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPNewsArticleReaderApp.swift; sourceTree = "<group>"; };
 		04BEA5152CC613770011EFFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048511D92CC65508001430DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				048511DA2CC65522001430DB /* ArticleRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		04BEA5072CC613770011EFFD = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 				04BEA5152CC613770011EFFD /* ContentView.swift */,
 				04BEA5172CC6137B0011EFFD /* Assets.xcassets */,
 				04BEA5212CC626CA0011EFFD /* news.json */,
+				048511D92CC65508001430DB /* Views */,
 				04BEA5232CC627110011EFFD /* Models */,
 				04BEA5192CC6137B0011EFFD /* Preview Content */,
 			);
@@ -156,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BEA5162CC613770011EFFD /* ContentView.swift in Sources */,
+				048511DB2CC65522001430DB /* ArticleRowView.swift in Sources */,
 				04BEA5142CC613770011EFFD /* SPNewsArticleReaderApp.swift in Sources */,
 				048511D82CC6531E001430DB /* NewsAPIResponse.swift in Sources */,
 				04BEA5252CC628C30011EFFD /* Article.swift in Sources */,
@@ -300,6 +312,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,6 +342,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
