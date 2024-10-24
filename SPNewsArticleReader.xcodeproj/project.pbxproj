@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047F239B2CCA7A250047E7BD /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F239A2CCA7A250047E7BD /* ArticleListView.swift */; };
 		048511D82CC6531E001430DB /* NewsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048511D72CC6531E001430DB /* NewsAPIResponse.swift */; };
 		048511DB2CC65522001430DB /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048511DA2CC65522001430DB /* ArticleRowView.swift */; };
 		04BEA5142CC613770011EFFD /* SPNewsArticleReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BEA5132CC613770011EFFD /* SPNewsArticleReaderApp.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		046A32D02CCA74A20069E252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		047F239A2CCA7A250047E7BD /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
 		048511D72CC6531E001430DB /* NewsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIResponse.swift; sourceTree = "<group>"; };
 		048511DA2CC65522001430DB /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
 		04BEA5102CC613770011EFFD /* SPNewsArticleReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPNewsArticleReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				048511DA2CC65522001430DB /* ArticleRowView.swift */,
+				047F239A2CCA7A250047E7BD /* ArticleListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BEA5162CC613770011EFFD /* ContentView.swift in Sources */,
+				047F239B2CCA7A250047E7BD /* ArticleListView.swift in Sources */,
 				048511DB2CC65522001430DB /* ArticleRowView.swift in Sources */,
 				04BEA5142CC613770011EFFD /* SPNewsArticleReaderApp.swift in Sources */,
 				048511D82CC6531E001430DB /* NewsAPIResponse.swift in Sources */,

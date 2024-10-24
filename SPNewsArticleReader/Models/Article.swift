@@ -55,7 +55,7 @@ extension Article: Identifiable {
 }
 
 extension Article {
-    static var articleData: [Article] {
+    static var previeweData: [Article] {
         let previewDataUrl = Bundle.main.url(forResource: "news", withExtension: "json")!
         let data = try! Data(contentsOf: previewDataUrl)
         

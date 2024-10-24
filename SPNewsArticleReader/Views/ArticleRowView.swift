@@ -78,7 +78,7 @@ struct ArticleRowView: View {
 #Preview {
     NavigationView {
         List {
-            ArticleRowView(article: .articleData[0])
+            ArticleRowView(article: .previeweData[0])
                 .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
         }
         .listStyle(.plain)
