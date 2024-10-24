@@ -39,7 +39,7 @@ struct ArticleRowView: View {
             .clipped()
             
             VStack(alignment: .leading, spacing: 8) {
-                Text(article.title)
+                Text(article.title ?? "Article Title")
                     .font(.headline)
                     .lineLimit(3)
                 Text(article.descriptionText)
@@ -62,7 +62,7 @@ struct ArticleRowView: View {
                     .buttonStyle(.bordered)
                     
                     Button {
-                        
+                        presentShareSheet(url: article.articleUrl)
                     } label: {
                         Image(systemName: "square.and.arrow.up")
                     }
@@ -72,6 +72,17 @@ struct ArticleRowView: View {
             }
             .padding([.horizontal, .bottom])
         }
+    }
+}
+
+extension View {
+    func presentShareSheet(url: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        (UIApplication.shared.connectedScenes.first as? UIWindowScene)?
+            .keyWindow?
+            .rootViewController?
+            .present(activityViewController, animated: true)
+        
     }
 }
 
