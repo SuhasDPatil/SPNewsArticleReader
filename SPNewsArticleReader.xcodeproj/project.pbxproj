@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046A32D02CCA74A20069E252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		048511D72CC6531E001430DB /* NewsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIResponse.swift; sourceTree = "<group>"; };
 		048511DA2CC65522001430DB /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
 		04BEA5102CC613770011EFFD /* SPNewsArticleReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPNewsArticleReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +68,7 @@
 		04BEA5122CC613770011EFFD /* SPNewsArticleReader */ = {
 			isa = PBXGroup;
 			children = (
+				046A32D02CCA74A20069E252 /* Info.plist */,
 				04BEA5132CC613770011EFFD /* SPNewsArticleReaderApp.swift */,
 				04BEA5152CC613770011EFFD /* ContentView.swift */,
 				04BEA5172CC6137B0011EFFD /* Assets.xcassets */,
@@ -307,6 +309,7 @@
 				DEVELOPMENT_TEAM = PA86MS98Y9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SPNewsArticleReader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,6 +340,7 @@
 				DEVELOPMENT_TEAM = PA86MS98Y9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SPNewsArticleReader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
