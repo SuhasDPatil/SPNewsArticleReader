@@ -7,25 +7,25 @@
 
 import Foundation
 fileprivate let relativeDateFormatter = RelativeDateTimeFormatter()
-struct Article {
+struct Article: Codable, Equatable, Identifiable {
     let source: Source
-    
-    let title: String
+    let title: String?
     let url: String
     let publishedAt: Date
-
     let author: String?
     let description: String?
     let urlToImage: String?
     
+    var id: String { url }
+    
     var authorText: String {
-        author ?? ""
+        author ?? "Unknown Author"
     }
     
     var descriptionText: String {
-        description ?? ""
+        description ?? "No Description"
     }
-
+    
     var captionText: String {
         "\(source.name) • \(relativeDateFormatter.localizedString(for: publishedAt, relativeTo: Date()))"
     }
@@ -42,16 +42,8 @@ struct Article {
     }
 }
 
-extension Article: Codable {
-    
-}
-
-extension Article: Equatable {
-    
-}
-
-extension Article: Identifiable {
-    var id: String { url }
+struct Source: Codable, Equatable {
+    let name: String
 }
 
 extension Article {
@@ -62,20 +54,11 @@ extension Article {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .iso8601
         
-        let apiResponse = try! jsonDecoder.decode(NewsAPIResponse.self, from: data)
-        return apiResponse.articles ?? []
+        // Use `try?` to safely decode the JSON, return an empty array if decoding fails
+        if let apiResponse = try? jsonDecoder.decode(NewsAPIResponse.self, from: data) {
+            return apiResponse.articles ?? []
+        } else {
+            return [] // Return an empty array if decoding fails
+        }
     }
 }
-struct Source {
-    let name: String
-}
-
-extension Source: Codable {
-    
-}
-
-extension Source: Equatable {
-    
-}
-
-
