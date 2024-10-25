@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SPNewsArticleReaderApp: App {
+    
+    @StateObject var articleBookmarkViewModel = ArticleBookmarkViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(articleBookmarkViewModel)
         }
     }
 }
