@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// `EmptyPlaceholderView` displays a message and an optional image when there is no content to show.
 struct EmptyPlaceholderView: View {
     let text: String
     let image: Image?

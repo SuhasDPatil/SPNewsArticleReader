@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Represents the response from the News API.
 struct NewsAPIResponse: Decodable {
     let status: String
     let totalResults: Int?

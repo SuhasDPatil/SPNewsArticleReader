@@ -61,12 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		042D804A2CCB75790042D18E /* Bookmark */ = {
+		042D804A2CCB75790042D18E /* BookmarkTab */ = {
 			isa = PBXGroup;
 			children = (
 				042D804B2CCB75990042D18E /* BookmarkTabView.swift */,
 			);
-			path = Bookmark;
+			path = BookmarkTab;
+			sourceTree = "<group>";
+		};
+		042D804F2CCB94970042D18E /* NewsTab */ = {
+			isa = PBXGroup;
+			children = (
+				042D80422CCB4BB60042D18E /* NewsTabView.swift */,
+				048511DA2CC65522001430DB /* ArticleRowView.swift */,
+				047F239A2CCA7A250047E7BD /* ArticleListView.swift */,
+			);
+			path = NewsTab;
 			sourceTree = "<group>";
 		};
 		042DBE362CCAABE4001CB7BA /* API */ = {
@@ -89,10 +99,8 @@
 		048511D92CC65508001430DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				042D804A2CCB75790042D18E /* Bookmark */,
-				048511DA2CC65522001430DB /* ArticleRowView.swift */,
-				047F239A2CCA7A250047E7BD /* ArticleListView.swift */,
-				042D80422CCB4BB60042D18E /* NewsTabView.swift */,
+				042D804F2CCB94970042D18E /* NewsTab */,
+				042D804A2CCB75790042D18E /* BookmarkTab */,
 				042DBE342CCA8299001CB7BA /* SafariView.swift */,
 				042D80442CCB514F0042D18E /* EmptyPlaceholderView.swift */,
 				042D80462CCB58F60042D18E /* RetryView.swift */,

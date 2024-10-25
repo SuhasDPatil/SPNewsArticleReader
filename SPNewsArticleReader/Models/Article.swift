@@ -6,7 +6,11 @@
 //
 
 import Foundation
+
+// Create a relative date formatter for formatting date strings
 fileprivate let relativeDateFormatter = RelativeDateTimeFormatter()
+
+/// `Article` represents a news article with various metadata.
 struct Article: Codable, Equatable, Identifiable {
     let source: Source
     let title: String?
@@ -34,6 +38,7 @@ struct Article: Codable, Equatable, Identifiable {
         URL(string: url)!
     }
     
+    // Image URL converted from string to URL type, returns nil if not available
     var imageURL: URL? {
         guard let urlToImage = urlToImage else {
             return nil

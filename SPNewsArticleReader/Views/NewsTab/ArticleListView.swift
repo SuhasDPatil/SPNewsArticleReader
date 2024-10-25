@@ -7,17 +7,23 @@
 
 import SwiftUI
 
+/// `ArticleListView` displays a list of articles, allowing users to tap on an article
+/// to view it in an in-app Safari browser.
 struct ArticleListView: View {
-    let articles: [Article]
-    @State private var selectedArticle: Article?
     
+    // Array of articles to be displayed in the list
+    let articles: [Article]
+    
+    // State property to manage the selected article for presenting in Safari
+    @State private var selectedArticle: Article?
     
     var body: some View {
         List {
+            // Iterates over each article and displays it using `ArticleRowView`
             ForEach(articles) { article in
                 ArticleRowView(article: article)
                     .onTapGesture {
-                        selectedArticle = article
+                        selectedArticle = article   // Sets the selected article when tapped
                     }
             }
             .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -25,8 +31,9 @@ struct ArticleListView: View {
         }
         .listStyle(.plain)
         .sheet(item: $selectedArticle) {
+            // Presents the selected article in a SafariView when set
             SafariView(url: $0.articleUrl)
-                .edgesIgnoringSafeArea(.bottom)
+                .edgesIgnoringSafeArea(.bottom)    // Expands SafariView to bottom edge
         }
     }
 }
