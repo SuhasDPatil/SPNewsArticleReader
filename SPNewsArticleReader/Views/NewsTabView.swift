@@ -16,13 +16,10 @@ struct NewsTabView: View {
         NavigationView {
             ArticleListView(articles: articles)
                 .overlay(overlayView)
-                .refreshable {
-                    loadTask()
-                }
-                .onAppear {
-                    loadTask()
-                }
-                .navigationTitle(articleNewsViewModel.selectedCategory.text)
+                .task(id: articleNewsViewModel.fetchTaskToken, loadTask)
+                .refreshable(action: refreshTask)
+                .navigationTitle(articleNewsViewModel.fetchTaskToken.category.text)
+                .navigationBarItems(trailing: menu)
         }
     }
     
@@ -33,9 +30,7 @@ struct NewsTabView: View {
         case .success(articles) where articles.isEmpty:
             EmptyPlaceholderView(text: "No Articles", image: nil)
         case .failure(let error):
-            RetryView(text: error.localizedDescription) {
-                loadTask()
-            }
+            RetryView(text: error.localizedDescription, retryAction: refreshTask)
         default: EmptyView()
         }
     }
@@ -48,9 +43,25 @@ struct NewsTabView: View {
         }
     }
     
-    private func loadTask() {
-        async {
-            await articleNewsViewModel.loadArticle()
+    private func loadTask() async {
+        await articleNewsViewModel.loadArticle()
+    }
+    
+    private func refreshTask() {
+        articleNewsViewModel.fetchTaskToken = FetchTaskToken(category: articleNewsViewModel.fetchTaskToken.category, toekn: Date())
+    }
+    
+    private var menu: some View {
+        Menu {
+            Picker("Category", selection: $articleNewsViewModel.fetchTaskToken.category) {
+                ForEach(Category.allCases) {
+                    Text($0.text).tag($0)
+                    
+                }
+            }
+        } label: {
+            Image(systemName: "fiberchannel")
+                .imageScale(.large)
         }
     }
 }
