@@ -36,6 +36,4 @@
 ## Contributing
 Feel free to fork this project, submit pull requests, or open issues for improvements.
 
-## License
-`SPNewsArticleReader` is available under the MIT license. See the LICENSE file for more info.
 
